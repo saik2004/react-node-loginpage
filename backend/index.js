@@ -3,9 +3,12 @@ import cors from 'cors'
 
 
 const app = express()
+const PORT = process.env.PORT || 3000;
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+
+
 
 const username = 'test123@gmail.com'
 const password = 'abc123'
@@ -21,6 +24,6 @@ app.post('/login',(req,res)=>{
 
 })
 
-app.listen(3000,(req,res)=>{
-    console.log('server started...')
-})
+app.listen(PORT, () => {
+    console.log(`server started on port ${PORT}`);
+});
