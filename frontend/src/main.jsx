@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import Dashboard from './components/dashboard.jsx'
+import Loginfailed from './components/loginfailed,.jsx'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
@@ -9,7 +10,8 @@ createRoot(document.getElementById('root')).render(
   
    <Routes>
      <Route path='/' element={<App/>}></Route>
-     <Route path='login' element={<Dashboard/>}></Route>
+     <Route path='/login' element={<Dashboard/>}></Route>
+     <Route path='/failed' element={<Loginfailed/>}></Route>
    </Routes>
 
  </BrowserRouter> 

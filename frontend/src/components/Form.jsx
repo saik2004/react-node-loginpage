@@ -43,13 +43,16 @@ function Form(){
      }
 
      function check(){
-        const validuser = axios.post("http://localhost:3000/login",{username:username,password:pass})
+        const validuser = axios.post("https://login-backend-iv28.onrender.com/login",{username:username,password:pass})
 
         console.log(validuser)
 
         validuser.then((data)=>{
             if(data.data === true){
                 navigate('/login')
+            }
+            else{
+                navigate('/failed')
             }
         })
         
