@@ -2,7 +2,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import Dashboard from './components/dashboard.jsx'
-import Loginfailed from './components/loginfailed.jsx'
+import Loginfailed from './components/Loginfailed.jsx'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
